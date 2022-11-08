@@ -20,8 +20,8 @@ pipeline {
 			}
 		}
 	}
-	
-	pose {
+
+	post {
 		always {
 			echo 'alway run me'
 		}
