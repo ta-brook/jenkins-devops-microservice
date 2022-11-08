@@ -5,19 +5,30 @@ pipeline {
 	agent any
 	stages {
 		stage('Build') {
-			step {
+			steps {
 				echo "Build"
 			}
 		}
 		stage('Test') {
-			step {
+			steps {
 				echo "Test"
 			}
 		}
 		stage('Integration Test') {
-			step {
+			steps {
 				echo "Integration Test"
 			}
+		}
+	}
+	pose {
+		always {
+			echo 'alway run me'
+		}
+		success {
+			echo 'successful'
+		}
+		failure {
+			echo 'failed'
 		}
 	}
 }
