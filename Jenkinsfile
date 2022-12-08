@@ -38,14 +38,12 @@ pipeline {
 			}
 		}
 
-		}
 		stage('Package') {
 			steps {
 				sh "mvn package -DskipTests"
 			}
 		}
 
-		}
 		stage('Buil Docker Image') {
 			steps {
 				//"docker build -t in28min/currency-exchange-devops:$env.BUILD_TAG"
@@ -55,7 +53,6 @@ pipeline {
 			}
 		}
 
-		}
 		stage('Push Docker Image') {
 			steps {
 				script {
